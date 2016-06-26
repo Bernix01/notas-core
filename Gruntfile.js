@@ -39,7 +39,7 @@ module.exports = function(grunt) {
 
     code: {
       // LCOV coverage file (can be string, glob or array)
-      src: 'coverage/*/*.info',
+      src: 'coverage/*/*/*.info',
       options: {
         // Any options for just this target
       }
