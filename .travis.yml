@@ -2,8 +2,8 @@ language: node_js
 node_js:
 - 4.2.3
 cache:
-directories:
-- node_modules
+  directories:
+  - node_modules
 matrix:
   fast_finish: true
   allow_failures:
@@ -28,6 +28,6 @@ deploy:
   - sed 'dist' .gitignore
   - modified .gitignore
   api_key:
-    secure: $key_h
+    secure: pdX139vcKp+w+qxML9R7ZTrPV61mPMcB8CPNtpOfhagnjbI9AwjW32njdfiWQbstpZgMZnaZUEzoPYh+YF/2bZsk66wHtUEZ07RSGkHYAtBUi+NZyD2HMS7gy5YZNsnZ3C9uwcdgiScAm/x+96jHC6OwAxjOliD1OuxuLUgyy1uz0GjspTfbpE66PeXJcPDZX/CuLO1on2WqRPO5mkYkfxBmrLUBchv5S1UEHWBDSDkAvK5Xsu6dlAhRriArCHU2D5Is3Ii/a+uInpoISKbC56bTOLYeR7FXSqFbj3pHqWGf/nuF94od2OKAPfr+E5Vixwk1U9egaASyd9vufu38PvdGMiz5tig50HcaJRA0nI56YYQvsFFVBzVl8s8rQMP8Sqfb0J1PlTO4E1NgREf0TP1+NNR8WPofEYl5rs4at9wHnNxIAYgkNDkmRz38A8/xZLh/IwRb5HR+dNk2SzDI5GznJIapJ6uSCqW4cetSJJTszXiHVvHZVObJCe0Nabb+1w+R7xwmObOJznsY/6c6Yu7UPbOQvK4IWEoPo1ObgxiZmMMZAPujYVJ6RUYUL+++oxRwx81T+zXZh8oOKY/UyKSgXvXSiRh1+nHZuVqK1a9BNmS5W9Ekd6RzWezLsE7N9db0y3+zSqsthCIkqA3mpDE24oiFTktL+pnA4jHsKpU=
   app: notas-core
   on: master
