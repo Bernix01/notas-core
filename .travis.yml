@@ -23,15 +23,15 @@ deploy:
   provider: heroku
   skip_cleanup: true
   strategy: git
-  before_deploy:
-    - echo 'ready?'
-    - sed -i '/^dist/ d' .gitignore
-    - echo 'modified .gitignore'
-    - ls
   api_key:
     secure: ANZoDY8VpaQFiIc5WPBgntICiGEFlYqtXRVP8FFQXVQk5lTdMGNWnqXxxhhKBMtM9TdR8YYJuwISt5wjz2f7ZfbyH63JmGwSGkD0fl/QiTkLBddDUvvsAUesvdWemGLO1h+vZfPeDZR0b8F82jyk5uTdRNfGYPT2f4Y+NMAnA33PVEEMsLdRqdx82rMzXjQmz2WOhCMUSjwOS2dveBQh3qtIokTcGDNSfyJ3oOMbW8vFjfDr2Aesx+jx+tH3JTSx8YhORavjr+l4HomneOeoCz4d0LQaQppc2D8hhRCv1lcX+cKKKSzNAMjkejlfqL7qgX5fzjau2SguBJX/uVszTFv3Blt9rVCvNqfqBksR2FfRQ3Xx0GZ92LEtrdt5mm9ejfdNeTm+D3KcJipOctgDiTPHjBQz/p7uUCkVAMxq6FCMC/rh+Kco5/CVKKINx0fSFx6asnKFqU2oYXYByC8tXn7hMAJG1QIVWBEy3RFvvXqeCIgAGv59SBCkl65zOAw7vwXpLqjY++1ylLNfiojKiZYebJ3Zfm6NUV95uMo8JyFczhfwY/j93npwGQRGOOElKnrC84ANELQrLAbDRMwyU2zwy9RbzW2C4rl/R5h1I4KICjAy6gcWRFfoAahjZbDRsKxwAWYGKswkTrkqLAwbDewOpiAtrrEPmsKosDSyQU8=
   app: notas-core
   on:
     repo: Bernix01/notas-core
   run: "ls -al"
-  after_deploy: "echo 'done.'"
+after_deploy: "echo 'done.'"
+before_deploy:
+  - echo 'ready?'
+  - sed -i '/^dist/ d' .gitignore
+  - echo 'modified .gitignore'
+  - ls
