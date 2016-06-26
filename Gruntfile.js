@@ -750,8 +750,7 @@ module.exports = function(grunt) {
           'wiredep:client',
           'postcss',
           'express:dev',
-          'protractor',
-          'istanbul_check_coverage'
+          'protractor'
         ]);
       }
     } else if (target === 'coverage') {
