@@ -1,20 +1,33 @@
 language: node_js
 node_js:
-  - 4.2.3
+- 4.2.3
 cache:
 directories:
-  - node_modules
+- node_modules
 matrix:
   fast_finish: true
   allow_failures:
-    - node_js: 5.1.1
+  - node_js: 5.1.1
 before_script:
-  - sudo apt-get install -y libkrb5-dev
-  - npm install -g bower grunt-cli
-  - bower install
+- sudo apt-get install -y libkrb5-dev
+- npm install -g bower grunt-cli
+- bower install
 script:
-  - grunt test
-  - grunt test:coverage
+- grunt test
+- grunt test:coverage
 services: mongodb
 after_success:
-  - grunt coveralls
+- grunt coveralls
+- grunt build
+deploy:
+  provider: heroku
+  skip_cleanup: true
+  strategy: git
+  before_deploy:
+    - "echo 'ready?'"
+    - "sed 'dist' .gitignore"
+    - "modified .gitignore"
+  api_key:
+    secure: $key_h
+  app: notas-core
+  on: master
