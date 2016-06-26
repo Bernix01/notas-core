@@ -24,10 +24,11 @@ deploy:
   skip_cleanup: true
   strategy: git
   before_deploy:
-  - echo 'ready?'
-  - sed 'dist' .gitignore
-  - modified .gitignore
+    - echo 'ready?'
+    - sed 'dist' .gitignore
+    - modified .gitignore
   api_key:
-    secure: GvUSaYCMDOMzXTTG137uOn8jgI/8SQuz5usEuOZZR+a7sAYnJ8dQv66gadPJDz7d65gM0jkMy9KC8gUSTKqosC3ZkpdikNiCltcm9siYbng9+quJSUJWpBBzn8q5WQ9MRNwldr5PIojTJldm8Js379u0t9V7NRJs/HbIgJbfQpff9eF0RkSioIh45tYUR8Rq5E7ceYNLRs6zq9nOrRzEHRXHWcVg2rAPPMnN0QOhwa7PgB+PjExyVzo4rzFrS4CrKm7E+mDlEw0K2eUEiXljlgfBf0Hy4yIG7aB5GjdZv8X2uzwbhbqfHqEqy9AoxZImAWIKnbLpwxrt15EdH5bXQFsOBqV8DG0AlXaC0Md+sjpo7EprwsgL/WX9DO/YW7RRElkcg/pzra+4NI0xutc4MxM0lmin4x374bHmBlPTASwieKaFQSFAzs5LCqB7LTGlN6Wx3eQvXZkladfQlLYHnQfsrVCFrn7cKyfW7ihx/rozhkfozSqJKWMt5NFD9SytCqlBv6z9svJlljrM8sSLaJvwis/Q/nmWbLFnFUNIAVhGKKXe19YMuHbkkauIymgTCdWJXv6nPoEf9pu/rMt/YJMA9MV7V9vpNNX+HJJZ4CMyAuZJzSfsyKI5Gvz/RbLdHXy23di5h9FLCAVplGiPo9YlTXbrpqbT7UvaAwRN4uA=
+    secure: ANZoDY8VpaQFiIc5WPBgntICiGEFlYqtXRVP8FFQXVQk5lTdMGNWnqXxxhhKBMtM9TdR8YYJuwISt5wjz2f7ZfbyH63JmGwSGkD0fl/QiTkLBddDUvvsAUesvdWemGLO1h+vZfPeDZR0b8F82jyk5uTdRNfGYPT2f4Y+NMAnA33PVEEMsLdRqdx82rMzXjQmz2WOhCMUSjwOS2dveBQh3qtIokTcGDNSfyJ3oOMbW8vFjfDr2Aesx+jx+tH3JTSx8YhORavjr+l4HomneOeoCz4d0LQaQppc2D8hhRCv1lcX+cKKKSzNAMjkejlfqL7qgX5fzjau2SguBJX/uVszTFv3Blt9rVCvNqfqBksR2FfRQ3Xx0GZ92LEtrdt5mm9ejfdNeTm+D3KcJipOctgDiTPHjBQz/p7uUCkVAMxq6FCMC/rh+Kco5/CVKKINx0fSFx6asnKFqU2oYXYByC8tXn7hMAJG1QIVWBEy3RFvvXqeCIgAGv59SBCkl65zOAw7vwXpLqjY++1ylLNfiojKiZYebJ3Zfm6NUV95uMo8JyFczhfwY/j93npwGQRGOOElKnrC84ANELQrLAbDRMwyU2zwy9RbzW2C4rl/R5h1I4KICjAy6gcWRFfoAahjZbDRsKxwAWYGKswkTrkqLAwbDewOpiAtrrEPmsKosDSyQU8=
   app: notas-core
-  on: master
+  on:
+    repo: Bernix01/notas-core
