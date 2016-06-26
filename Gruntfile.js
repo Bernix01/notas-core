@@ -18,8 +18,7 @@ module.exports = function(grunt) {
     protractor: 'grunt-protractor-runner',
     buildcontrol: 'grunt-build-control',
     istanbul_check_coverage: 'grunt-mocha-istanbul',
-    ngconstant: 'grunt-ng-constant',
-    coveralls: 'grunt-coveralls'
+    ngconstant: 'grunt-ng-constant'
   });
 
   // Time how long tasks take. Can help when optimizing build times
@@ -27,24 +26,7 @@ module.exports = function(grunt) {
 
   // Define the configuration for all the tasks
   grunt.initConfig({
-    //coveralls
-    coveralls: {
-    // Options relevant to all targets
-    options: {
-      // When true, grunt-coveralls will only print a warning rather than
-      // an error, to prevent CI builds from failing unnecessarily (e.g. if
-      // coveralls.io is down). Optional, defaults to false.
-      force: false
-    },
 
-    code: {
-      // LCOV coverage file (can be string, glob or array)
-      src: 'coverage/*/*.info',
-      options: {
-        // Any options for just this target
-      }
-    },
-  },
     // Project settings
     pkg: grunt.file.readJSON('package.json'),
     yeoman: {
