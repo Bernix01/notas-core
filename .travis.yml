@@ -24,9 +24,9 @@ deploy:
   skip_cleanup: true
   strategy: git
   before_deploy:
-    - "echo 'ready?'"
-    - "sed 'dist' .gitignore"
-    - "modified .gitignore"
+  - echo 'ready?'
+  - sed 'dist' .gitignore
+  - modified .gitignore
   api_key:
     secure: $key_h
   app: notas-core
