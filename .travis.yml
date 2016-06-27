@@ -33,5 +33,5 @@ deploy:
   app: notas-core
   on:
     repo: Bernix01/notas-core
-  run: "ls dist -al"
+  run: "ls -al && cat .gitignore"
 after_deploy: "echo 'done.' && ls -al"
