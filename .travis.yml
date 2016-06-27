@@ -19,6 +19,11 @@ services: mongodb
 after_success:
   - grunt coveralls
   - grunt build
+before_deploy:
+  - echo 'ready?'
+  - sed -i '/^dist/ d' .gitignore
+  - echo 'modified .gitignore' && cat .gitignore
+  - ls dist -al
 deploy:
   provider: heroku
   skip_cleanup: true
@@ -29,9 +34,4 @@ deploy:
   on:
     repo: Bernix01/notas-core
   run: "ls -al"
-after_deploy: "echo 'done.'"
-before_deploy:
-  - echo 'ready?'
-  - sed -i '/^dist/ d' .gitignore
-  - echo 'modified .gitignore'
-  - ls
+after_deploy: "echo 'done.' && ls -al"
