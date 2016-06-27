@@ -21,9 +21,7 @@ after_success:
   - grunt build
 before_deploy:
   - echo 'ready?'
-  - sed -i '/^dist/ d' .gitignore
-  - echo 'modified .gitignore' && cat .gitignore
-  - ls dist -al
+  - cd dist
 deploy:
   provider: heroku
   skip_cleanup: true
