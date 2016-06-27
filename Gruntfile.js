@@ -37,13 +37,14 @@ module.exports = function(grunt) {
       force: false
     },
 
-    code: {
+    integration: {
       // LCOV coverage file (can be string, glob or array)
-      src: 'coverage/*/*/*.info',
-      options: {
-        // Any options for just this target
-      }
+      src: 'coverage/server/integration/*.info'
     },
+    unit: {
+      // LCOV coverage file (can be string, glob or array)
+      src: 'coverage/server/unit/*.info'
+    }
   },
     // Project settings
     pkg: grunt.file.readJSON('package.json'),
