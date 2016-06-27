@@ -21,7 +21,7 @@ after_success:
   - grunt build
 before_deploy:
   - echo 'ready?'
-  - cd dist
+  - cd dist && git init
 deploy:
   provider: heroku
   skip_cleanup: true
